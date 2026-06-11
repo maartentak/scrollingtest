@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "skills": {
+    "100m-leads": {
+      "source": "getagentseal/founder-playbook",
+      "sourceType": "github",
+      "skillPath": "100m-leads/SKILL.md",
+      "computedHash": "c3eed3291a2410929bf57a659cd04d59a6395421a50a295482b8b1b66cda4bbd"
+    },
+    "100m-offers": {
+      "source": "getagentseal/founder-playbook",
+      "sourceType": "github",
+      "skillPath": "100m-offers/SKILL.md",
+      "computedHash": "2b3a287914af37d7a00588a6da22abb9251ad237c730d25b0d967bcdcb4bda8e"
+    },
+    "blue-ocean-strategy": {
+      "source": "getagentseal/founder-playbook",
+      "sourceType": "github",
+      "skillPath": "blue-ocean-strategy/SKILL.md",
+      "computedHash": "c7ef801ccec98ac31a71e19a06fadf76fb3598cf5b5c49f8d18c960aacb6adb4"
+    },
+    "crossing-the-chasm": {
+      "source": "getagentseal/founder-playbook",
+      "sourceType": "github",
+      "skillPath": "crossing-the-chasm/SKILL.md",
+      "computedHash": "c8149f012601ab7961aa5dc58a6081abdb13fa971eaa9b17dc05b659109ca185"
+    },
+    "diagnose": {
+      "source": "getagentseal/founder-playbook",
+      "sourceType": "github",
+      "skillPath": "diagnose/SKILL.md",
+      "computedHash": "15700b1e23d35cec34520570b8a5549e513c007130a07c9c743ae6b7beadf835"
+    },
+    "four-steps": {
+      "source": "getagentseal/founder-playbook",
+      "sourceType": "github",
+      "skillPath": "four-steps/SKILL.md",
+      "computedHash": "6fb64f120aac0e550f73a64fe01156dd9ee9ac02852019869de1a9bb535ff52d"
+    },
+    "influence": {
+      "source": "getagentseal/founder-playbook",
+      "sourceType": "github",
+      "skillPath": "influence/SKILL.md",
+      "computedHash": "e87bc87c31e3bf3d65c4172ae44f984e774f4465449228992826ffec2bc6de27"
+    },
+    "lean-startup": {
+      "source": "getagentseal/founder-playbook",
+      "sourceType": "github",
+      "skillPath": "lean-startup/SKILL.md",
+      "computedHash": "0985a2701938f4b744296aa3d62d69ce884cf1e6a4757574768d82f311abc4b7"
+    },
+    "made-to-stick": {
+      "source": "getagentseal/founder-playbook",
+      "sourceType": "github",
+      "skillPath": "made-to-stick/SKILL.md",
+      "computedHash": "102efd0c7142d965576b99fa1bdaedd683907c5788a8e8f0d5a856e840f12654"
+    },
+    "mom-test": {
+      "source": "getagentseal/founder-playbook",
+      "sourceType": "github",
+      "skillPath": "mom-test/SKILL.md",
+      "computedHash": "747c654293a3229d05743e23b7505c440eb8f996744360011adbcb7e06299187"
+    },
+    "monetizing-innovation": {
+      "source": "getagentseal/founder-playbook",
+      "sourceType": "github",
+      "skillPath": "monetizing-innovation/SKILL.md",
+      "computedHash": "896fced34b3b2ea97f4974a1f21306e5f0831bb56ccd9da885d5f63cfb781273"
+    },
+    "obviously-awesome": {
+      "source": "getagentseal/founder-playbook",
+      "sourceType": "github",
+      "skillPath": "obviously-awesome/SKILL.md",
+      "computedHash": "72818149132ff9b85ab7d61026f437f434ae0e42fa2dc2e59ab9d71677f78dfc"
+    },
+    "spin-selling": {
+      "source": "getagentseal/founder-playbook",
+      "sourceType": "github",
+      "skillPath": "spin-selling/SKILL.md",
+      "computedHash": "44348b92164196b1727788e427269a14b436b52b6c4b42a01ff32adfbbc98f39"
+    },
+    "storybrand": {
+      "source": "getagentseal/founder-playbook",
+      "sourceType": "github",
+      "skillPath": "storybrand/SKILL.md",
+      "computedHash": "2f7310c5bfbb574379a35b6b0766fb5803b48d98d5be53cffe2ca511f5d02a34"
+    },
+    "traction": {
+      "source": "getagentseal/founder-playbook",
+      "sourceType": "github",
+      "skillPath": "traction/SKILL.md",
+      "computedHash": "9e69d2b97074f92c9de19bfc6746fd7b8544f6c139eb8c7181294f34591bc55c"
+    }
+  }
+}
