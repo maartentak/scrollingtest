@@ -1,0 +1,42 @@
+/* ============================================================
+   VORXS — TYPOGRAPHY TOKENS
+   Two families:
+   • Hanken Grotesk  — display, headings, UI, uppercase labels.
+                       Humanist grotesque; heavy weights for titles.
+   • Chakra Petch    — technical numerals & money. Squared,
+                       mechanical, tabular. ALL currency uses this.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800;900&family=Chakra+Petch:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Families */
+  --font-display: 'Hanken Grotesk', system-ui, sans-serif;
+  --font-ui: 'Hanken Grotesk', system-ui, sans-serif;
+  --font-numeric: 'Chakra Petch', 'Hanken Grotesk', monospace;
+
+  /* Weights */
+  --w-regular: 400;
+  --w-medium: 500;
+  --w-semibold: 600;
+  --w-bold: 700;
+  --w-black: 800;
+
+  /* Display / heading scale (mobile-first) */
+  --t-hero: 46px;      /* big money figure — Chakra Petch 600 */
+  --t-title: 30px;     /* screen titles — Hanken 800 */
+  --t-pretitle: 30px;  /* the faint line above a title — Hanken 500 */
+  --t-amount: 22px;    /* row money — Chakra Petch 600 */
+  --t-body: 17px;      /* row primary text — Hanken 600 */
+  --t-label: 11px;     /* uppercase tracked label */
+  --t-meta: 12px;      /* time / sublabel */
+
+  /* Line heights */
+  --lh-tight: 1.02;
+  --lh-snug: 1.12;
+  --lh-normal: 1.4;
+
+  /* Letter spacing */
+  --ls-label: 0.14em;   /* uppercase labels — wide */
+  --ls-title: -0.01em;  /* tight display */
+  --ls-numeric: 0.01em;
+}

@@ -1,0 +1,58 @@
+/* ============================================================
+   VORXS — COLOR TOKENS
+   A muted, sun-faded olive system. Warm bone "paper" surfaces,
+   deep forest greens for structure, one mustard + one terracotta
+   accent used sparingly and at full bleed.
+   ============================================================ */
+:root {
+  /* --- Base palette --- */
+  --sage-900: #2A2F24;   /* near-black olive — primary ink */
+  --sage-800: #353B2C;
+  --forest-700: #404839; /* deepest green — icon tiles, footers */
+  --forest-600: #4C5544; /* dark list rows */
+  --forest-500: #5A6356; /* default forest */
+  --moss-400: #6B7464;   /* lighter alternating row */
+  --moss-300: #828B76;   /* muted dividers on dark */
+
+  --canvas-500: #9DA288; /* page / device backdrop (sage) */
+  --canvas-400: #A8AC96;
+
+  --paper-300: #BFC2AF;  /* default screen surface */
+  --paper-200: #C9CCB9;  /* raised surface */
+  --paper-100: #D6D8C7;  /* lightest header wash */
+
+  --mustard-500: #DBC64E; /* primary accent block (financial) */
+  --mustard-400: #E2D06A;
+
+  --terracotta-500: #D96E48; /* alert / CTA accent */
+  --terracotta-400: #E0805E;
+
+  /* --- Neutral text scale --- */
+  --ink-strong: #2A2F24;
+  --ink-muted: #6E7560;   /* labels, secondary on paper */
+  --ink-faint: #9BA088;   /* placeholder / pre-text ("Add your") */
+  --on-dark: #DDE0CF;     /* text on forest/terracotta */
+  --on-dark-muted: #A7AE97;
+
+  /* --- Semantic surface aliases --- */
+  --surface-canvas: var(--canvas-500);
+  --surface-screen: var(--paper-300);
+  --surface-raised: var(--paper-200);
+  --surface-header: var(--paper-100);
+  --surface-ink: var(--forest-700);
+
+  /* --- Semantic text aliases --- */
+  --text-primary: var(--ink-strong);
+  --text-secondary: var(--ink-muted);
+  --text-pre: var(--ink-faint);
+  --text-on-ink: var(--on-dark);
+
+  /* --- Semantic accents --- */
+  --accent-financial: var(--mustard-500);
+  --accent-alert: var(--terracotta-500);
+  --accent-positive: var(--forest-500);
+
+  /* --- Lines --- */
+  --line-on-paper: rgba(42, 47, 36, 0.18);
+  --line-on-ink: rgba(221, 224, 207, 0.18);
+}

@@ -1,0 +1,37 @@
+/* ============================================================
+   VORXS — SPACING, RADII, SHADOW TOKENS
+   Editorial, generous, mostly square. Corners are nearly absent
+   on internal blocks; only the device shell and a few buttons
+   round. Shadows are barely-there — this is a flat, printed look.
+   ============================================================ */
+:root {
+  /* Spacing scale (4pt base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 56px;
+  --space-10: 72px;
+
+  /* Screen gutter */
+  --gutter: 26px;
+
+  /* Radii — kept minimal on purpose */
+  --r-none: 0px;
+  --r-sm: 4px;      /* icon tiles, small chips */
+  --r-md: 10px;     /* inputs, buttons */
+  --r-pill: 999px;  /* avatars, circular nav button */
+  --r-device: 44px; /* phone shell */
+
+  /* Strokes */
+  --stroke-hairline: 1px;
+  --stroke-rule: 1.5px;
+
+  /* Shadows — flat system; use almost never */
+  --shadow-none: none;
+  --shadow-screen: 0 24px 60px -28px rgba(42, 47, 36, 0.45);
+}
