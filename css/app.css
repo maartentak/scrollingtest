@@ -8,20 +8,25 @@
   font-display: swap;
 }
 
+/* Palette mapped to the Vorxs design system (design-system/tokens/colors.css):
+   sun-faded olive paper, deep forest structure, mustard + terracotta accents.
+   Two regulation-specific deviations are kept, as in the original build:
+   muted ink is darkened to pass WCAG AA (Vorxs's ink-muted is decorative-grade),
+   and the lighter canvas variant is used so body text clears AA on the bare bg. */
 :root {
-  --bg: #A9AB9B;
-  --s1: #CDCFC0;          /* cards, sheets */
-  --s2: #6A7263;          /* secondary rows */
-  --s3: #4A5246;          /* tertiary rows, icon chips */
-  --ink: #20241E;
-  --ink-muted: #565B4B;   /* darkened from ref #7E8273 to pass AA on s1 */
-  --ghost: #7E8273;       /* decorative only: trailing digits */
-  --on-dark: #FBFBF5;
-  --on-dark-muted: #D9DCCB;
-  --accent-warm: #E2674A;
-  --accent-bright: #E3CE4F;
-  --on-warm: #20241E;
-  --on-bright: #20241E;
+  --bg: #ABAF99;          /* Vorxs canvas (lighter variant) */
+  --s1: #BFC2AF;          /* paper-300: cards, sheets */
+  --s2: #5A6356;          /* forest-500: secondary rows */
+  --s3: #404839;          /* forest-700: tertiary rows, icon chips */
+  --ink: #2A2F24;         /* sage-900 */
+  --ink-muted: #3D4231;   /* darkened from Vorxs ink-muted #6E7560 to pass AA */
+  --ghost: #9BA088;       /* Vorxs ink-faint — decorative only: trailing digits */
+  --on-dark: #DDE0CF;     /* on-dark */
+  --on-dark-muted: #BFC6B0;
+  --accent-warm: #D96E48;     /* terracotta-500 */
+  --accent-bright: #DBC64E;   /* mustard-500 */
+  --on-warm: #2A2F24;
+  --on-bright: #2A2F24;
   --line: color-mix(in srgb, var(--ink) 35%, transparent);
   --radius: 26px;
   --radius-s: 14px;
@@ -29,16 +34,16 @@
 }
 
 [data-theme="dark"] {
-  --bg: #20241E;
-  --s1: #2C3127;
-  --s2: #3A4036;
-  --s3: #4A5246;
-  --ink: #D9DCCB;
-  --ink-muted: #A9AE9A;
-  --ghost: #6E7363;
-  --on-dark: #ECEEE2;
-  --on-dark-muted: #C2C6B4;
-  --line: color-mix(in srgb, var(--ink) 30%, transparent);
+  --bg: #23271E;          /* inverted around sage-900 */
+  --s1: #2F3528;
+  --s2: #404839;          /* forest-700 */
+  --s3: #4C5544;          /* forest-600 */
+  --ink: #DDE0CF;
+  --ink-muted: #9BA088;   /* Vorxs ink-faint — passes AA on the dark canvas */
+  --ghost: #6E7560;
+  --on-dark: #DDE0CF;
+  --on-dark-muted: #A7AE97;
+  --line: color-mix(in srgb, var(--ink) 28%, transparent);
 }
 
 /* Extra calm: accents collapse into the tonal family */
