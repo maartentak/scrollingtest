@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="none">
+  <!--
+    Recreation of the Rotion mark for prototyping.
+    Swap this file for the official SVG asset before shipping —
+    all references point here (nav, footer, favicon).
+  -->
+  <g fill="#141412">
+    <path d="M0 0 H72 Q96 0 96 24 V40 H0 Z" />
+    <path d="M0 56 L40 96 H0 Z" />
+    <path d="M72 48 H96 V96 H48 V72 Z" />
+  </g>
+</svg>

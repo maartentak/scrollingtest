@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rotion — The operating system for reusable packaging</title>
+  <meta name="description" content="Asset-level accountability, enforceable circulation rules and built-in resilience — across every partner, location and flow." />
+  <link rel="icon" type="image/svg+xml" href="assets/rotion-mark.svg" />
+
+  <!-- Geist (primary brand font, vendored from @fontsource) -->
+  <link rel="stylesheet" href="vendor/fonts/geist-sans/400.css" />
+  <link rel="stylesheet" href="vendor/fonts/geist-sans/500.css" />
+  <link rel="stylesheet" href="vendor/fonts/geist-sans/600.css" />
+  <link rel="stylesheet" href="vendor/fonts/geist-mono/400.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- GSAP (UMD, loaded before the module below) -->
+  <script src="vendor/gsap.min.js"></script>
+  <script src="vendor/ScrollTrigger.min.js"></script>
+  <script src="vendor/ScrollToPlugin.min.js"></script>
+
+  <script type="importmap">
+    { "imports": { "three": "./vendor/three.module.js" } }
+  </script>
+</head>
+<body>
+
+  <header class="site-nav">
+    <nav class="nav-links">
+      <a href="#">Platform</a>
+      <a href="#">Cases</a>
+    </nav>
+    <a class="nav-logo" href="#" aria-label="Rotion home">
+      <img src="assets/rotion-mark.svg" alt="" class="nav-mark" />
+      <span class="nav-wordmark">Rotion</span>
+    </a>
+    <div class="nav-actions">
+      <a href="#" class="btn btn-ghost">Sign in</a>
+      <a href="#" class="btn btn-ink">Book a demo</a>
+    </div>
+  </header>
+
+  <!-- Pinned scroll experience -->
+  <section id="experience" aria-label="How Rotion works">
+    <canvas id="scene"></canvas>
+
+    <div class="hero-overlay" id="heroOverlay">
+      <p class="eyebrow">Operating system for reusable packaging</p>
+      <h1>The new standard<br />in reuse.</h1>
+      <p class="hero-sub">
+        Asset-level accountability. Enforceable circulation rules.<br />
+        Built-in resilience — across every partner, location and flow.
+      </p>
+      <div class="scroll-hint">
+        <span>Scroll to follow the loop</span>
+        <span class="hint-line"></span>
+      </div>
+    </div>
+
+    <ol class="steps" id="steps">
+      <li class="step" data-step="0">
+        <button class="step-head" type="button">
+          <span class="step-num">01</span>
+          <span class="step-title">Every asset, identified</span>
+        </button>
+        <div class="step-body">
+          <p>
+            Each crate, tray and pallet gets a digital identity. QR, barcode
+            or RFID — Rotion adopts the codes you already use, aligned with
+            GS1, so assets move freely across partners and systems.
+          </p>
+        </div>
+      </li>
+      <li class="step" data-step="1">
+        <button class="step-head" type="button">
+          <span class="step-num">02</span>
+          <span class="step-title">One shared truth</span>
+        </button>
+        <div class="step-body">
+          <p>
+            Every scan records who handled an asset, where, in which role and
+            for how long. Warehouses, transport and retail backrooms all
+            contribute to a single operational truth — from day one.
+          </p>
+        </div>
+      </li>
+      <li class="step" data-step="2">
+        <button class="step-head" type="button">
+          <span class="step-num">03</span>
+          <span class="step-title">Returns that run themselves</span>
+        </button>
+        <div class="step-body">
+          <p>
+            Circulation rules enforce return windows, deposits clear
+            automatically between partners, and leaks surface before they
+            become losses.
+          </p>
+        </div>
+      </li>
+      <li class="step" data-step="3">
+        <button class="step-head" type="button">
+          <span class="step-num">04</span>
+          <span class="step-title">A loop that compounds</span>
+        </button>
+        <div class="step-body">
+          <p>
+            Cycle times, pool health, loss attribution: every rotation makes
+            the system smarter — so you scale reuse with confidence, not
+            guesswork.
+          </p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="outro">
+    <h2>Built for circular operations,<br />beyond spreadsheets and single&#8209;use thinking.</h2>
+    <div class="outro-grid">
+      <article>
+        <h3>Multi-partner by design</h3>
+        <p>Add partners through web or native apps — no long IT projects. Everyone scans the same IDs.</p>
+      </article>
+      <article>
+        <h3>Works with your codes</h3>
+        <p>QR, barcodes, RFID or mixed setups. Rotion adopts existing codes and aligns with GS1 standards.</p>
+      </article>
+      <article>
+        <h3>Deposits &amp; clearing</h3>
+        <p>A neutral clearing layer that knows where each asset was sold, returned, and who owes whom.</p>
+      </article>
+      <article>
+        <h3>Resilient at scale</h3>
+        <p>Role-based access, multi-entity support and advanced controls that adapt as your pool grows.</p>
+      </article>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <img src="assets/rotion-mark.svg" alt="" class="footer-mark" />
+    <span>© 2026 Rotion — rotion.eu</span>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
