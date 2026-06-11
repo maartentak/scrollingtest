@@ -135,6 +135,100 @@ export const unstick = {
   ],
 };
 
+// Flow 5: the knowing-doing gap. The barrier decides the strategy; the
+// target supplies specifics. Willpower is never the plan.
+export const sabotage = {
+  targets: [
+    { value: "sleep", text: "Going to bed earlier" },
+    { value: "alcohol", text: "Drinking less" },
+    { value: "water", text: "Drinking more water" },
+    { value: "move", text: "Moving my body" },
+    { value: "food", text: "Eating real meals" },
+    { value: "screen", text: "Less scrolling" },
+    { value: "other", text: "Something else" },
+  ],
+  contexts: [
+    { value: "evening", text: "In the evening" },
+    { value: "afterwork", text: "Right after work" },
+    { value: "stress", text: "When stress is high" },
+    { value: "flat", text: "When I'm bored or flat" },
+    { value: "social", text: "Around other people" },
+    { value: "allday", text: "All day, low-key" },
+  ],
+  barriers: [
+    { value: "cue", text: "I just forget in the moment" },
+    { value: "energy", text: "No energy left by the time it matters" },
+    { value: "metime", text: "It feels like giving up my only me-time" },
+    { value: "pull", text: "The pull of the other thing is too strong" },
+    { value: "friction", text: "Starting feels like too much hassle" },
+    { value: "ambivalence", text: "Honestly, part of me doesn't want to" },
+  ],
+  strategies: {
+    cue: {
+      title: "Not weakness — a missing cue",
+      body: "Willpower never got a chance: by the time you remember, the moment is gone. The fix is a louder cue, not more discipline.",
+      plans: {
+        water: { ifthen: "When I sit down in my usual spot, I drink from the bottle that's already there.", prep: "Fill a bottle and put it in your spot" },
+        sleep: { ifthen: "When the wind-down alarm goes, I start — no negotiation, no one-more-thing.", prep: "Set a daily wind-down alarm, label it kindly" },
+        alcohol: { ifthen: "When I open the fridge after dinner, I take whatever is at eye level.", prep: "Put the alternative drink at eye level" },
+        generic: { ifthen: "When my reminder goes, I do the two-minute version. Nothing more is owed.", prep: "Set one alarm for the exact moment it should happen" },
+      },
+    },
+    energy: {
+      title: "Not willpower — an empty tank",
+      body: "Evening-you runs on fumes and shouldn't be trusted with decisions. Move the deciding and the prep to a time when there's still fuel.",
+      plans: {
+        sleep: { ifthen: "I decide bedtime at dinner, not at midnight: alarm set, things laid out, before the fuel runs out.", prep: "Set tonight's wind-down alarm right now" },
+        water: { ifthen: "Most of the water happens before five, while there's still momentum.", prep: "Fill tomorrow's big bottle and put it out tonight" },
+        alcohol: { ifthen: "The decision happens early: if nothing is cold by evening, tired-me won't fix that.", prep: "Take tonight's drinks out of the fridge" },
+        generic: { ifthen: "Earlier-me sets everything up; evening-me only follows the arrows.", prep: "Do one piece of prep right now, while you're here" },
+      },
+    },
+    metime: {
+      title: "Not sabotage — protest",
+      body: "If this is where your only free time dies, of course you fight it. The me-time is legitimate. Don't cancel it — re-home it.",
+      plans: {
+        sleep: { ifthen: "At wind-down time I keep doing the exact same fun thing — in bed, lights low. The me-time comes along.", prep: "Put your charger by the bed, deal sealed" },
+        alcohol: { ifthen: "Same chair, same hour, fancy glass — the ritual stays, only the liquid changes.", prep: "Put tomorrow's ritual drink in the fridge" },
+        screen: { ifthen: "Scrolling gets a protected slot earlier in the evening, guilt-free, with an end mark.", prep: "Pick tonight's slot and set its end alarm" },
+        generic: { ifthen: "The me-time goes on the calendar before the should-do, protected instead of stolen.", prep: "Block 30 guilt-free minutes for tomorrow, now" },
+      },
+    },
+    pull: {
+      title: "A habit loop, not a character flaw",
+      body: "In the moment, the pull always wins — so stop fighting in the moment. Rig the room beforehand: one step harder for it, one step easier for the swap.",
+      plans: {
+        alcohol: { ifthen: "Out of the fridge, out of sight; the alternative cold and in front. The lazy option becomes the good option.", prep: "Do the swap now: drinks to the back, alternative in the fridge" },
+        screen: { ifthen: "The phone sleeps outside the bedroom; something analog takes its place on the nightstand.", prep: "Move the charger out of the bedroom" },
+        sleep: { ifthen: "The phone sleeps outside the bedroom; the bed stops being a feed-reader.", prep: "Move the charger out of the bedroom" },
+        generic: { ifthen: "One step of friction gets added to the pull; one step gets removed from the should.", prep: "Make one of those two moves right now" },
+      },
+    },
+    friction: {
+      title: "The first step is too expensive",
+      body: "Not laziness — the start cost is just too high for a tired brain. Shrink the step until it's nearly free, and only ever commit to that.",
+      plans: {
+        water: { ifthen: "The bar is one glass when I stand up. A glass, not a regime.", prep: "Drink one glass of water now. That's the whole step" },
+        sleep: { ifthen: "Wind-down lite: teeth brushed and phone charging by the alarm. Whatever happens after is allowed.", prep: "Set that one alarm now" },
+        move: { ifthen: "The commitment is shoes on and out the door. Coming straight back is permitted.", prep: "Put the shoes by the door" },
+        generic: { ifthen: "Only the two-minute version exists. Anything beyond it is a bonus, not the deal.", prep: "Do the two-minute version once, right now" },
+      },
+    },
+    ambivalence: {
+      title: "Half of you isn't on board",
+      body: "Plans built on a hidden no collapse quietly. So don't sign a life sentence — run a short experiment and judge it on data, not vibes.",
+      plans: {
+        generic: { ifthen: "Three days, honest trial, then a real re-decision. Permission to quit is part of the deal.", prep: "Set one reminder for the re-decide moment, three days out" },
+      },
+    },
+  },
+  outcomes: {
+    did: "It happened. No streak to protect — tonight is just tonight, again.",
+    partly: "Partly counts. The plan held some weight, and that's data.",
+    not: "No verdict. When a plan doesn't happen, the plan was too big or the cue missed — those are fixable, you aren't broken.",
+  },
+};
+
 export const goOrCancel = {
   categories: [
     { value: "call", text: "A call" },

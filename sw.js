@@ -3,7 +3,7 @@
 // stale-while-revalidate for assets (instant load, self-updating).
 // Bump CACHE on changes that must invalidate old precached files.
 
-const CACHE = "steady-v2";
+const CACHE = "steady-v3";
 const SHELL = [
   ".",
   "index.html",
@@ -19,6 +19,7 @@ const SHELL = [
   "js/flow-state-check.js",
   "js/flow-unstick.js",
   "js/flow-plan.js",
+  "js/flow-sabotage.js",
   "js/flow-checkin.js",
   "js/history.js",
   "js/settings.js",

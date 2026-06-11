@@ -8,9 +8,9 @@ Working title — see the build and design briefs for the full rationale.
 
 ## What's in this version
 
-The full deterministic core (MVP steps 1–3, plus Flow 4):
+The full deterministic core (MVP steps 1–3, plus Flows 4 and 5):
 
-- **Home** — four cards, nothing else. No badges, no streaks, no guilt.
+- **Home** — five cards, nothing else. No badges, no streaks, no guilt.
 - **Flow 1: State Check** — body-scan chips → "would more input feel better
   or worse?" → optional emotion naming → plain verdict (overloaded /
   understimulated / unclear) → one matched action → optional 25-min check-back.
@@ -25,6 +25,13 @@ The full deterministic core (MVP steps 1–3, plus Flow 4):
   go-for-30-minutes deal. A waiting-mode helper appears for same-day plans.
   The next-day follow-up surfaces as a quiet row on the home screen.
 - **Flow 4: Just Checking In** — energy slider, mood chips, optional note.
+- **Flow 5: Self-Sabotage** — for the knowing-doing gap ("I should sleep
+  earlier / drink less / drink more water, but don't"). Names the actual
+  blocker (missing cue, empty tank, me-time protest, habit pull, start
+  friction, hidden ambivalence) and matches the plan to the mechanism:
+  an if-then implementation intention plus one one-minute environment-prep
+  action right now. Willpower is never the plan. A next-day follow-up row
+  asks happened / partly / not — "not" routes to a smaller rework, no shame.
 - **History** — parked tasks (tap to mark done) and a flat log.
 - **Settings** — extra-calm mode (accents removed), light/dark/auto theme,
   JSON export, full data wipe, crisis note.

@@ -6,6 +6,7 @@ import { db } from "./store.js";
 import { fmtDate } from "./content.js";
 
 const stateLabels = { over: "overloaded", under: "understimulated", mixed: "unclear" };
+const outcomeLabels = { did: "happened", partly: "partly", not: "not yet" };
 
 export function showHistory() {
   nav.go((screen) => {
@@ -35,6 +36,12 @@ export function showHistory() {
         glyph: "OK",
         title: t.text,
         meta: `done · ${fmtDate(t.created_ts)}`,
+      })),
+      ...db.habits.map(h => ({
+        ts: h.created_ts,
+        glyph: "HB",
+        title: `Plan: ${h.target_text || "habit"}`,
+        meta: `${h.outcome ? outcomeLabels[h.outcome] : "running"} · ${fmtDate(h.created_ts)}`,
       })),
     ].sort((a, b) => b.ts - a.ts).slice(0, 60);
 

@@ -10,6 +10,8 @@ const empty = () => ({
   plans: [],    // { id, category, when, event_ts, capacity_answers, gate_verdict,
                 //   predicted_dread, predicted_enjoyment, actual_enjoyment, went, followup_done }
   actions: [],  // { id, flow, text, accepted, completed, ts }
+  habits: [],   // { id, created_ts, target, target_text, context, barrier,
+                //   ifthen, prep, followup_due, outcome: did|partly|not }
   settings: { calm: false, theme: "auto" },
 });
 
@@ -74,6 +76,20 @@ export const db = {
     return state.plans.filter(p =>
       p.gate_verdict === "go" && !p.followup_done && p.event_ts && now > p.event_ts + 3 * 3600e3
     );
+  },
+
+  addHabit(h) { const rec = { id: uid(), created_ts: Date.now(), ...h }; state.habits.push(rec); save(); return rec; },
+  updateHabit(id, patch) {
+    const h = state.habits.find(x => x.id === id);
+    if (h) { Object.assign(h, patch); save(); }
+    return h;
+  },
+  get habits() { return state.habits; },
+
+  // Habit plans whose morning-after has arrived and no outcome is logged yet.
+  get dueHabitFollowups() {
+    const now = Date.now();
+    return state.habits.filter(h => !h.outcome && h.followup_due && now > h.followup_due);
   },
 
   exportJSON() { return JSON.stringify(state, null, 2); },
