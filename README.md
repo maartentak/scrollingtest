@@ -34,10 +34,9 @@ become the fallback for the Claude-powered phrasing layer (MVP step 4).
 
 ## Running it
 
-No build step. Serve the folder with any static server:
+No build step. Serve the repo root with any static server:
 
 ```bash
-cd steady
 python3 -m http.server 8080
 # or: npx serve .
 ```
