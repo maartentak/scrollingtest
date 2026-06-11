@@ -1,6 +1,9 @@
 // App-shell cache so Steady opens instantly and works offline.
+// Strategy: network-first for navigations (fresh HTML when online),
+// stale-while-revalidate for assets (instant load, self-updating).
+// Bump CACHE on changes that must invalidate old precached files.
 
-const CACHE = "steady-v1";
+const CACHE = "steady-v2";
 const SHELL = [
   ".",
   "index.html",
@@ -35,11 +38,30 @@ self.addEventListener("activate", (e) => {
 
 self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET") return;
+
+  if (e.request.mode === "navigate") {
+    e.respondWith(
+      fetch(e.request)
+        .then(res => {
+          const copy = res.clone();
+          caches.open(CACHE).then(c => c.put(e.request, copy));
+          return res;
+        })
+        .catch(() => caches.match(e.request).then(hit => hit || caches.match("index.html")))
+    );
+    return;
+  }
+
   e.respondWith(
-    caches.match(e.request).then(hit => hit || fetch(e.request).then(res => {
-      const copy = res.clone();
-      caches.open(CACHE).then(c => c.put(e.request, copy));
-      return res;
-    }))
+    caches.match(e.request).then(hit => {
+      const refresh = fetch(e.request).then(res => {
+        if (res.ok) {
+          const copy = res.clone();
+          caches.open(CACHE).then(c => c.put(e.request, copy));
+        }
+        return res;
+      }).catch(() => hit);
+      return hit || refresh;
+    })
   );
 });
